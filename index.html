@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>제품 제안서 쇼케이스</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb bg-orb--amber"></div>
+    <div class="bg-orb bg-orb--teal"></div>
+    <div class="bg-grid"></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">PPT 추출 · 제품 큐레이션</p>
+        <h1>제품 제안서 쇼케이스</h1>
+        <p class="lede">
+          업로드된 PPT의 핵심 제품 정보를 카드로 정리했습니다. 각 덱을 선택해
+          슬라이드별 제품 개요를 빠르게 살펴보세요.
+        </p>
+        <div class="hero-meta">
+          <span class="meta-pill" id="deck-count">덱 0개</span>
+          <span class="meta-pill" id="slide-count">슬라이드 0개</span>
+          <span class="meta-pill">이미지 포함 카드</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="deck-nav" id="deck-nav"></section>
+      <section class="deck-summary" id="deck-summary"></section>
+      <section class="cards" id="cards"></section>
+    </main>
+
+    <footer class="footer">
+      <p>원본 PPT 파일: <span id="deck-filename">-</span></p>
+    </footer>
+
+    <script src="data/ppt-products.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
