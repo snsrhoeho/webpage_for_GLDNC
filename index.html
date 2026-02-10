@@ -1,41 +1,51 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>제품 제안서 쇼케이스</title>
+    <title>제품 제안</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="page-fade is-active" id="page-fade" aria-hidden="true">
+      <div class="page-fade__label" id="page-fade-label">GL D&amp;C</div>
+    </div>
     <div class="bg-orb bg-orb--amber"></div>
     <div class="bg-orb bg-orb--teal"></div>
     <div class="bg-grid"></div>
 
     <header class="hero">
       <div class="hero-inner">
-        <p class="eyebrow">PPT 추출 · 제품 큐레이션</p>
-        <h1>제품 제안서 쇼케이스</h1>
-        <p class="lede">
-          업로드된 PPT의 핵심 제품 정보를 카드로 정리했습니다. 각 덱을 선택해
-          슬라이드별 제품 개요를 빠르게 살펴보세요.
-        </p>
-        <div class="hero-meta">
-          <span class="meta-pill" id="deck-count">덱 0개</span>
-          <span class="meta-pill" id="slide-count">슬라이드 0개</span>
-          <span class="meta-pill">이미지 포함 카드</span>
+        <p class="eyebrow">(주)지앨디앤씨</p>
+        <h1>제품 제안</h1>
+        <p class="lede">범안로 996번길 6 광명티아모IT타워 1017호</p>
+        <div class="ceo">
+          <div class="ceo-actions">
+            <a class="ceo-toggle" href="ceo.html">대표이사</a>
+            <button class="ceo-toggle" type="button" id="map-toggle">오시는 길</button>
+          </div>
+          <div class="ceo-card is-visible" id="ceo-card" aria-hidden="false">
+            <div class="ceo-placeholder">명함 사진 업로드 예정</div>
+          </div>
+          <div class="map-card" id="map-card" aria-hidden="true">
+            <div class="map-placeholder">지도 이미지 업로드 예정</div>
+          </div>
         </div>
       </div>
     </header>
 
     <main class="main">
-      <section class="deck-nav" id="deck-nav"></section>
+      <div class="deck-nav-wrap">
+        <div class="deck-nav-trigger">Options</div>
+        <section class="deck-nav" id="deck-nav"></section>
+      </div>
+      <div class="slide-nav-wrap">
+        <div class="slide-nav-trigger">Slides</div>
+        <section class="slide-nav" id="slide-nav"></section>
+      </div>
       <section class="deck-summary" id="deck-summary"></section>
-      <section class="cards" id="cards"></section>
+      <section class="cards cards--square" id="cards"></section>
     </main>
-
-    <footer class="footer">
-      <p>원본 PPT 파일: <span id="deck-filename">-</span></p>
-    </footer>
 
     <script src="data/ppt-products.js"></script>
     <script src="app.js"></script>
